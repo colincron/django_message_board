@@ -1,7 +1,13 @@
 <!--templates/home.html -->
-<h1>Message board homepage</h1>
-<ul> 
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+<h1>Message Board</h1>
+<ul class="list-group"> 
     {% for post in all_posts_list %}
-    <li>{{ post.text }}</li>
+    <li class="list-group-item">{{ post.text }}</li>
     {% endfor %}
 </ul>
+</div>
+{% endblock %}
